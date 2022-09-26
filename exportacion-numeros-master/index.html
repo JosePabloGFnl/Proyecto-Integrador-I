@@ -92,8 +92,7 @@
                 }
             }
 
-            arr = [arr]; //Meter el arreglo en otro arreglo por que si no tio tensorflow se enoja >:(
-            //Nah basicamente Debe estar en un arreglo nuevo en el indice 0, por ser un tensor4d en forma 1, 28, 28, 1
+            arr = [arr]; //Meter el arreglo en otro arreglo
             var tensor4 = tf.tensor4d(arr);
             var resultados = modelo.predict(tensor4).dataSync();
             var mayorIndice = resultados.indexOf(Math.max.apply(null, resultados));
