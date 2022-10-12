@@ -103,6 +103,7 @@
 
             console.log("Prediccion", caracteres[mayorIndice]);
             document.getElementById("resultado").innerHTML = caracteres[mayorIndice];
+            document.getElementById('certeza').innerHTML = "Certeza de predicción: "+((Math.max(resultados))*100).toFixed(2) + "%";
         }
 
         /**
