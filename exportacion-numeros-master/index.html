@@ -45,6 +45,7 @@
               <button class="noselect" id="limpiar" onclick="limpiar()">Limpiar</button>
               <button class="" id="predecir" onclick="predecir()">Predecir</button>
               <div id="resultado"></div>
+              <div id="certeza"></div>
             </div>
             
           </div>
@@ -103,7 +104,7 @@
 
             console.log("Prediccion", caracteres[mayorIndice]);
             document.getElementById("resultado").innerHTML = caracteres[mayorIndice];
-            document.getElementById('certeza').innerHTML = "Certeza de predicción: "+((Math.max(resultados))*100).toFixed(2) + "%";
+            document.getElementById('certeza').innerHTML = "Certeza de predicción: "+(((Math.max.apply(null, resultados).toFixed(2))*100)) + "%";
         }
 
         /**
